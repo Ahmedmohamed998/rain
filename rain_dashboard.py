@@ -142,7 +142,6 @@ with tab2:
         st.subheader('Relation Between Humidity and Rain Tomorrow')
         st.markdown('')
         st.markdown('')
-        st.markdown('')
         fig, ax = plt.subplots()
         ax = sns.scatterplot(data=df, x='Humidity9am', y='Humidity3pm', hue='RainTomorrow')
         ax.set_title('Humidity and Rain Tomorrow', color='white')
