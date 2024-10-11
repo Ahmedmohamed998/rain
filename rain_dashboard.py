@@ -94,7 +94,6 @@ with tab1:
         st.subheader('Rain Tomorrow based on Today\'s Rain')
         fig = px.sunburst(df, path=["RainToday", "RainTomorrow"], title="Rain tomorrow based on whether it rains today?")
         fig.update_traces(textinfo="label+percent parent")
-        # Remove background
         fig.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
         st.plotly_chart(fig, use_container_width=True)
         with st.expander('insights'):
@@ -143,7 +142,7 @@ with tab2:
         st.subheader('Relation Between Humidity and Rain Tomorrow')
         fig, ax = plt.subplots()
         ax = sns.scatterplot(data=df, x='Humidity9am', y='Humidity3pm', hue='RainTomorrow')
-	ax.set_title('Humidity and Rain Tomorrow', color='white')
+        ax.set_title('Humidity and Rain Tomorrow', color='white')
         ax.xaxis.label.set_color('white')
         ax.yaxis.label.set_color('white')
         ax.tick_params(axis='x', colors='white')
