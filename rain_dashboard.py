@@ -34,7 +34,6 @@ video_html = """
         
 st.markdown(video_html, unsafe_allow_html=True)
 
-# Hide Streamlit style elements and remove top margin
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
@@ -53,7 +52,7 @@ st.title('🌦️ Rain Prediction in Australia')
 
 @st.cache_data
 def get_data():
-    df = pd.read_csv(r'E:\road masr\final project\Rain_clean.csv')
+    df = pd.read_csv('Rain_clean.csv')
     return df
 
 df = get_data()
