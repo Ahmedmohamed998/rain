@@ -143,9 +143,6 @@ with tab2:
         st.markdown('')
         st.markdown('')
         st.markdown('')
-        st.markdown('')
-        st.markdown('')
-        st.markdown('')
         fig, ax = plt.subplots()
         ax = sns.scatterplot(data=df, x='Humidity9am', y='Humidity3pm', hue='RainTomorrow')
         ax.set_title('Humidity and Rain Tomorrow', color='white')
@@ -155,6 +152,9 @@ with tab2:
         ax.tick_params(axis='y', colors='white')
         fig.patch.set_alpha(0)
         st.pyplot(fig)
+        st.markdown('')
+        st.markdown('')
+        st.markdown('')
         with st.expander('insights'):
             st.write('When the humidity at 3 PM exceeds 60% and the humidity at 9 AM falls between 60% and 90%, there is an increased likelihood of rain the following day.')
 
