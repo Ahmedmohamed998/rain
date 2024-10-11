@@ -145,7 +145,7 @@ with tab2:
         st.markdown('')
         st.markdown('')
         st.markdown('')
-        fig, ax = plt.subplots()
+        fig, ax = plt.subplots(figsize=((6,6))
         ax = sns.scatterplot(data=df, x='Humidity9am', y='Humidity3pm', hue='RainTomorrow')
         ax.set_title('Humidity and Rain Tomorrow', color='white')
         ax.xaxis.label.set_color('white')
