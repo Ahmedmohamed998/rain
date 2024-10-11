@@ -2,5 +2,5 @@ pandas
 plotly
 numpy
 streamlit
-seaboarn
+seaborn
 matplotlib
