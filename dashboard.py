@@ -52,7 +52,7 @@ st.title('🌦️ Rain Prediction in Australia')
 
 @st.cache_data
 def get_data():
-    df = pd.read_csv(r'E:\road masr\final project\Rain_clean.csv')
+    df = pd.read_csv('Rain_clean.csv')
     return df
 
 df = get_data()
@@ -94,7 +94,6 @@ with tab1:
         st.subheader('Rain Tomorrow based on Today\'s Rain')
         fig = px.sunburst(df, path=["RainToday", "RainTomorrow"], title="Rain tomorrow based on whether it rains today?")
         fig.update_traces(textinfo="label+percent parent")
-        # Remove background
         fig.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
         st.plotly_chart(fig, use_container_width=True)
         with st.expander('insights'):
