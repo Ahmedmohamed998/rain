@@ -32,7 +32,7 @@ video_html = """
 		</video>
         """
         
-st.markdown(video_html, unsafe_allow_html=True)#de 3al4n yanfz elvideo elfo2
+st.markdown(video_html, unsafe_allow_html=True)
 
 hide_streamlit_style = """
             <style>
@@ -52,7 +52,7 @@ st.title('🌦️ Rain Prediction in Australia')
 
 @st.cache_data
 def get_data():
-    df = pd.read_csv(r'E:\weather in Australia\dashboard(streamlit)\Rain_AUS.csv')
+    df = pd.read_csv('Rain_AUS.csv')
     return df
 
 df = get_data()
