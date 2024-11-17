@@ -24,7 +24,7 @@ st.title('🌦️ Rain Prediction in Australia')
 
 @st.cache_data
 def get_data():
-    df = pd.read_csv(r'E:\weather in Australia\dashboard(streamlit)\Rain_AUS.csv')
+    df = pd.read_csv(r'Rain_AUS.csv')
     return df
 
 df = get_data()
